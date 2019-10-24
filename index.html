@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title></title>
+<!-- 2019-10-24 Thu 13:40 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Org-mode">
+<meta name="author" content="葉景新">
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+/* org mode styles on top of twbs */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 18px;
+    margin-bottom: 105px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 101px;
+    background-color: #f5f5f5;
+}
+
+footer > div {
+    padding: 10px;
+}
+
+footer p {
+    margin: 0 0 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#table-of-contents {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+blockquote p {
+    font-size: 18px;
+}
+
+pre {
+    font-size: 16px;
+}
+
+.footpara {
+    display: inline-block;
+}
+
+figcaption {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+/* from twbs docs */
+
+.bs-docs-sidebar.affix {
+    position: static;
+}
+@media (min-width: 768px) {
+    .bs-docs-sidebar {
+        padding-left: 20px;
+    }
+}
+
+/* All levels of nav */
+.bs-docs-sidebar .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+}
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+    padding-left: 19px;
+    color: #A1283B;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #A1283B;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+    padding-left: 18px;
+    font-weight: bold;
+    color: #A1283B;
+    background-color: transparent;
+    border-left: 2px solid #A1283B;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-docs-sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav > li > a:focus {
+    padding-left: 29px;
+}
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+/* Nav: third level (shown on .active) */
+.bs-docs-sidebar .nav .nav .nav {
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 40px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav .nav > li > a:focus {
+    padding-left: 39px;
+}
+.bs-docs-sidebar .nav .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav .nav > .active:focus > a {
+    padding-left: 38px;
+    font-weight: 500;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+    .bs-docs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    /* Widen the fixed sidebar */
+    .bs-docs-sidebar.affix,
+    .bs-docs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-docs-sidebar.affix {
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 20px;
+    }
+    .bs-docs-sidebar.affix-bottom {
+        position: absolute; /* Undo the static from mobile first approach */
+    }
+    .bs-docs-sidebar.affix .bs-docs-sidenav,.bs-docs-sidebar.affix-bottom .bs-docs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+}
+@media (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .bs-docs-sidebar.affix-bottom,
+    .bs-docs-sidebar.affix {
+        width: 263px;
+    }
+}
+</style>
+<script type="text/javascript">
+$(function() {
+    'use strict';
+
+    $('.bs-docs-sidebar li').first().addClass('active');
+
+    $(document.body).scrollspy({target: '.bs-docs-sidebar'});
+
+    $('.bs-docs-sidebar').affix();
+});
+</script>
+</head>
+<body>
+<div id="content" class="container">
+<div class="row"><div class="col-md-9"><h1 class="title"></h1>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Environments</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Language</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Python3.6
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> how to run</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+make sure you've install the python3.6. then you can just type the following commands
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">python solution1.py
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Questions</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 第一題</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #4f97d7; font-weight: bold;">import</span> unittest
+
+
+<span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">reverse_str</span><span style="color: #4f97d7;">(</span>value<span style="color: #4f97d7;">)</span>:
+    <span style="color: #4f97d7; font-weight: bold;">return</span> value<span style="color: #4f97d7;">[</span>::-<span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span>
+
+
+<span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">reverse_words</span><span style="color: #4f97d7;">(</span>words<span style="color: #4f97d7;">)</span>:
+    <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #2d9574;">' '</span>.join<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">[</span>word<span style="color: #2d9574;">[</span>::-<span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span> <span style="color: #4f97d7; font-weight: bold;">for</span> word <span style="color: #4f97d7; font-weight: bold;">in</span> words.split<span style="color: #2d9574;">(</span><span style="color: #2d9574;">' '</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span>
+
+
+<span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">TestCase</span><span style="color: #4f97d7;">(</span>unittest.TestCase<span style="color: #4f97d7;">)</span>:
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">test_reverse_str</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #7590db;">value</span> = <span style="color: #2d9574;">'abc'</span>
+        <span style="color: #7590db;">expected</span> = <span style="color: #2d9574;">'cba'</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.assertEqual<span style="color: #4f97d7;">(</span>reverse_str<span style="color: #bc6ec5;">(</span>value<span style="color: #bc6ec5;">)</span>, expected<span style="color: #4f97d7;">)</span>
+
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">test_reverse_words</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #7590db;">words</span> = <span style="color: #2d9574;">"flipped class room is important"</span>
+        <span style="color: #7590db;">expected</span> = <span style="color: #2d9574;">"deppilf ssalc moor si tnatropmi"</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.assertEqual<span style="color: #4f97d7;">(</span>reverse_words<span style="color: #bc6ec5;">(</span>words<span style="color: #bc6ec5;">)</span>, expected<span style="color: #4f97d7;">)</span>
+
+
+<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">__name__</span> == <span style="color: #2d9574;">'__main__'</span>:
+    unittest.main<span style="color: #4f97d7;">()</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 第二題</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #4f97d7; font-weight: bold;">import</span> unittest
+
+
+<span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">remove_three_and_five_multiple_without_common</span><span style="color: #4f97d7;">(</span>num<span style="color: #4f97d7;">)</span>:
+    <span style="color: #4f97d7; font-weight: bold;">if</span> num &lt; <span style="color: #a45bad;">1</span>:
+        <span style="color: #4f97d7; font-weight: bold;">raise</span> <span style="color: #ce537a; font-weight: bold;">ValueError</span><span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"invalid input"</span><span style="color: #4f97d7;">)</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #4f97d7;">len</span><span style="color: #4f97d7;">(</span>
+        <span style="color: #4f97d7;">tuple</span><span style="color: #bc6ec5;">(</span>
+            <span style="color: #4f97d7;">filter</span><span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">lambda</span> x: <span style="color: #4f97d7; font-weight: bold;">not</span> <span style="color: #67b11d;">(</span><span style="color: #b1951d;">(</span>x % <span style="color: #a45bad;">3</span> == <span style="color: #a45bad;">0</span> <span style="color: #4f97d7; font-weight: bold;">or</span> x % <span style="color: #a45bad;">5</span> == <span style="color: #a45bad;">0</span><span style="color: #b1951d;">)</span> <span style="color: #4f97d7; font-weight: bold;">and</span> x % <span style="color: #a45bad;">15</span> != <span style="color: #a45bad;">0</span><span style="color: #67b11d;">)</span>,
+                   <span style="color: #4f97d7;">range</span><span style="color: #67b11d;">(</span><span style="color: #a45bad;">1</span>, num + <span style="color: #a45bad;">1</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+
+<span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">TestCase</span><span style="color: #4f97d7;">(</span>unittest.TestCase<span style="color: #4f97d7;">)</span>:
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">test_remove_three_and_five_multiple_without_common</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #7590db;">num</span> = <span style="color: #a45bad;">15</span>
+        <span style="color: #7590db;">expected</span> = <span style="color: #a45bad;">9</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.assertEqual<span style="color: #4f97d7;">(</span>remove_three_and_five_multiple_without_common<span style="color: #bc6ec5;">(</span>num<span style="color: #bc6ec5;">)</span>,
+                         expected<span style="color: #4f97d7;">)</span>
+
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">test_edge_case</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #7590db;">num</span> = <span style="color: #a45bad;">1</span>
+        <span style="color: #7590db;">expected</span> = <span style="color: #a45bad;">1</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.assertEqual<span style="color: #4f97d7;">(</span>remove_three_and_five_multiple_without_common<span style="color: #bc6ec5;">(</span>num<span style="color: #bc6ec5;">)</span>,
+                         expected<span style="color: #4f97d7;">)</span>
+
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">test_invalid_case</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>:
+        <span style="color: #7590db;">num</span> = <span style="color: #a45bad;">0</span>
+
+        <span style="color: #4f97d7; font-weight: bold;">with</span> <span style="color: #4f97d7; font-weight: bold;">self</span>.assertRaises<span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">ValueError</span><span style="color: #4f97d7;">)</span>:
+            remove_three_and_five_multiple_without_common<span style="color: #4f97d7;">(</span>num<span style="color: #4f97d7;">)</span>
+
+
+<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">__name__</span> == <span style="color: #2d9574;">'__main__'</span>:
+    unittest.main<span style="color: #4f97d7;">()</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> 第三題</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+基本上可以把題目想成用 truth table 來表達，今天看到三的袋子各有標籤，如下
+然後我們可以來個排列組合一下實際袋子情況內容，來各字填上對或錯，再來繼續推論題目
+</p>
+
+<table class="table table-striped table-bordered table-hover table-condensed">
+
+
+<colgroup>
+<col  class="left">
+
+<col  class="left">
+
+<col  class="left">
+
+<col  class="left">
+</colgroup>
+<tbody>
+<tr>
+<td class="text-left">實際情況</td>
+<td class="text-left">只裝鉛筆</td>
+<td class="text-left">只裝原子筆</td>
+<td class="text-left">混合</td>
+</tr>
+
+<tr>
+<td class="text-left">鉛原混</td>
+<td class="text-left">F</td>
+<td class="text-left">F</td>
+<td class="text-left">F</td>
+</tr>
+
+<tr>
+<td class="text-left">鉛混原</td>
+<td class="text-left">F</td>
+<td class="text-left">T</td>
+<td class="text-left">T</td>
+</tr>
+
+<tr>
+<td class="text-left">原混鉛</td>
+<td class="text-left">T</td>
+<td class="text-left">T</td>
+<td class="text-left">T</td>
+</tr>
+
+<tr>
+<td class="text-left">原鉛混</td>
+<td class="text-left">T</td>
+<td class="text-left">T</td>
+<td class="text-left">F</td>
+</tr>
+
+<tr>
+<td class="text-left">混鉛原</td>
+<td class="text-left">T</td>
+<td class="text-left">T</td>
+<td class="text-left">T</td>
+</tr>
+
+<tr>
+<td class="text-left">混原鉛</td>
+<td class="text-left">T</td>
+<td class="text-left">F</td>
+<td class="text-left">T</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+實際只有這六種可能性(3!)，那今天能夠符合題目所敘述的標籤全貼錯的狀況，只有表中我全為true的情況(true代表有符合標籤是錯的情況, false代表，標籤是對的，那就不符合題目要求)
+</p>
+
+<p>
+兩種情況我挑選出來是下面這樣
+</p>
+
+<ul class="org-ul">
+<li>原混鉛
+</li>
+<li>混鉛原
+</li>
+</ul>
+
+<p>
+基本上答案就是這樣了，當然也可以將這狀況來比對看看
+</p>
+
+<p>
+那我們今天從混和的去挑，因為他標籤是錯的，所以代表他一定是只有鉛筆或原子筆，今天假設是鉛筆，那就是符合 <code>原混鉛</code> 這狀況，因為指裝原子筆只剩下混合的可能性了，要不然他標籤會是對的，無法符合題目敘述！
+</p>
+
+<p>
+另外一個允許的狀況也可以套套看，一樣的意思最後都會符合題目的敘述。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> 第四題</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+今天可以將題目變成數學表達式
+</p>
+
+<p>
+三人出的錢 = 餐點的錢 + 服務生暗摃的錢
+</p>
+
+<p>
+900 = 900 + 0 =&gt; 這是一開始的
+</p>
+
+<p>
+900 = 750 + 150 =&gt; 服務生發現可以退費150
+</p>
+
+<p>
+900 = 750 + 60 + 90 =&gt; 服務生想要暗槓 60
+</p>
+
+<p>
+900 - 90 = 750 + 60 
+</p>
+
+<p>
+3*(300-30) = 750 + 60 
+</p>
+
+<p>
+810 = 750 + 60  (90元已經被移出去這個等式了，等量公理兩邊相減)
+</p>
+
+<p>
+所以今天題目敘述詭異的地方是， 270*3 卻又去加 60 想要等於 900 這段，因為今天出出去的錢總數已經變成 810元了。所以拿810去加60有點意義不明，是故意要錯誤引導。
+</p>
+</div>
+</div>
+</div>
+</div><div class="col-md-3"><nav id="table-of-contents">
+<div id="text-table-of-contents" class="bs-docs-sidebar">
+<ul class="nav">
+<li><a href="#sec-1">1. Environments</a>
+<ul class="nav">
+<li><a href="#sec-1-1">1.1. Language</a></li>
+<li><a href="#sec-1-2">1.2. how to run</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Questions</a>
+<ul class="nav">
+<li><a href="#sec-2-1">2.1. 第一題</a></li>
+<li><a href="#sec-2-2">2.2. 第二題</a></li>
+<li><a href="#sec-2-3">2.3. 第三題</a></li>
+<li><a href="#sec-2-4">2.4. 第四題</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+</div></div></div>
+<footer id="postamble" class="">
+<div><p class="author">Author: 葉景新</p>
+<p class="date">Created: 2019-10-24 Thu 13:40</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.3 (<a href="http://orgmode.org">Org-mode</a> 9.2.6)</p>
+</div>
+</footer>
+</body>
+</html>
